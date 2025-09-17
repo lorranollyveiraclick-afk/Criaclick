@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark futuristic theme matching reference */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 15 89% 59%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 15 89% 59%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 15 89% 59% / 0.2;
+    --input: 0 0% 12%;
+    --ring: 15 89% 59%;
+
+    --radius: 0.75rem;
+
+    /* Custom neon design tokens */
+    --neon-green: 15 89% 59%;
+    --neon-glow: 15 89% 59% / 0.5;
+    --grid-color: 15 89% 59% / 0.1;
+    --sidebar-accent: 15 89% 59%;
+    --geometric-line: 15 89% 59% / 0.3;
+    
+    /* Gradients and effects */
+    --gradient-neon: linear-gradient(135deg, hsl(15 89% 59%), hsl(20 89% 54%));
+    --gradient-dark: radial-gradient(ellipse at center, hsl(0 0% 8%), hsl(0 0% 3%));
+    --shadow-neon: 0 0 50px hsl(15 89% 59% / 0.5);
+    --shadow-glow: 0 0 100px hsl(15 89% 59% / 0.3);
+    --text-glow: 0 0 20px hsl(15 89% 59% / 0.8);
+
+    --sidebar-background: 0 0% 3%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 15 89% 59%;
+    --sidebar-primary-foreground: 0 0% 8%;
+    --sidebar-accent: 15 89% 59%;
+    --sidebar-accent-foreground: 0 0% 8%;
+    --sidebar-border: 15 89% 59% / 0.2;
+    --sidebar-ring: 15 89% 59%;
+  }
+
+  /* Removido tema claro por solicitação */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/30;
+  }
+}
+
