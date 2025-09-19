@@ -112,7 +112,8 @@ const FuturisticHero = () => {
           </div>
         </div>
 
-        {/* Bottom Stats */}
+        {/* Bottom Stats - Temporarily Hidden */}
+        {/* 
             <div className="max-w-7xl mx-auto mt-16 md:mt-24">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             <div className="bg-card/20 backdrop-blur border border-primary/30 rounded-xl p-6 text-center">
@@ -129,6 +130,7 @@ const FuturisticHero = () => {
             </div>
           </div>
         </div>
+        */}
       </div>
 
       {/* Geometric Decorations */}
