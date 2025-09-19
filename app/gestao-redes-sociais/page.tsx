@@ -100,19 +100,19 @@ export default function GestaoRedesSociaisPage() {
       title: t('plan_redes_basico'),
       price: t('plan_redes_basico_price'),
       popular: false,
-      features: t('plan_redes_basico_features') as string[]
+      features: t('plan_redes_basico_features')
     },
     {
       title: t('plan_redes_profissional'),
       price: t('plan_redes_profissional_price'),
       popular: true,
-      features: t('plan_redes_profissional_features') as string[]
+      features: t('plan_redes_profissional_features')
     },
     {
       title: t('plan_redes_premium'),
       price: t('plan_redes_premium_price'),
       popular: false,
-      features: t('plan_redes_premium_features') as string[]
+      features: t('plan_redes_premium_features')
     }
   ];
 

@@ -12,6 +12,7 @@ import {
   Eye,
   Maximize2
 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function PortfolioRender3DPage() {
   const { t } = useI18n();
@@ -284,11 +285,12 @@ export default function PortfolioRender3DPage() {
                     <div className="relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-2xl transition-all duration-300">
                       {/* Real Image */}
                       <div className={`relative ${getAspectRatioClasses(item.aspectRatio)} overflow-hidden`}>
-                        <img
+                        <Image
                           src={item.image}
                           alt={item.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                          loading="lazy"
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                         />
                         
                         
