@@ -100,19 +100,39 @@ export default function GestaoRedesSociaisPage() {
       title: t('plan_redes_basico'),
       price: t('plan_redes_basico_price'),
       popular: false,
-      features: t('plan_redes_basico_features')
+      features: [
+        t('plan_redes_basico_feature_1'),
+        t('plan_redes_basico_feature_2'),
+        t('plan_redes_basico_feature_3'),
+        t('plan_redes_basico_feature_4'),
+        t('plan_redes_basico_feature_5')
+      ]
     },
     {
       title: t('plan_redes_profissional'),
       price: t('plan_redes_profissional_price'),
       popular: true,
-      features: t('plan_redes_profissional_features')
+      features: [
+        t('plan_redes_profissional_feature_1'),
+        t('plan_redes_profissional_feature_2'),
+        t('plan_redes_profissional_feature_3'),
+        t('plan_redes_profissional_feature_4'),
+        t('plan_redes_profissional_feature_5'),
+        t('plan_redes_profissional_feature_6')
+      ]
     },
     {
       title: t('plan_redes_premium'),
       price: t('plan_redes_premium_price'),
       popular: false,
-      features: t('plan_redes_premium_features')
+      features: [
+        t('plan_redes_premium_feature_1'),
+        t('plan_redes_premium_feature_2'),
+        t('plan_redes_premium_feature_3'),
+        t('plan_redes_premium_feature_4'),
+        t('plan_redes_premium_feature_5'),
+        t('plan_redes_premium_feature_6')
+      ]
     }
   ];
 
