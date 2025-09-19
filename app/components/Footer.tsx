@@ -6,8 +6,14 @@ import { useI18n } from '@/i18n';
 const Footer = () => {
   const { locale, setLocale, t } = useI18n();
   
+  const solutionsLinks = [
+    { label: t('solutions_sites_landing'), href: '/sites-landing-pages' },
+    { label: t('solutions_lojas_virtuais'), href: '/lojas-virtuais' },
+    { label: t('solutions_gestao_redes'), href: '/gestao-redes-sociais' }
+  ];
+
   const institutionalLinks = [
-    { label: t('footer_link_company'), href: '#empresa' },
+    { label: t('footer_link_company'), href: '/empresa' },
     { label: t('footer_link_contact'), href: '#contato' },
     { label: t('footer_link_privacy'), href: '#privacidade' },
     { label: t('footer_link_terms'), href: '#termos' }
@@ -51,6 +57,25 @@ const Footer = () => {
                 <Instagram size={20} className="text-primary group-hover:scale-110 transition-transform" />
               </a>
             </div>
+          </div>
+
+          {/* Solutions Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-6 text-primary">{t('header_solutions')}</h4>
+            <nav className="space-y-4">
+              {solutionsLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="block text-muted-foreground hover:text-primary transition-colors relative group"
+                >
+                  <span className="relative">
+                    {link.label}
+                    <span className="absolute bottom-0 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  </span>
+                </a>
+              ))}
+            </nav>
           </div>
 
           {/* Institutional Links */}
